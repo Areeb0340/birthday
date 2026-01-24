@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ghazala! 🎉💖</title>
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background: linear-gradient(160deg,#1a1a2e,#0f0f1f);
+    color:#fff;
+    text-align:center;
+    min-height:200vh;
+}
+
+/* Headings */
+h1 { font-size:3.5em; margin-top:20px; animation: glow 1.5s infinite alternate; color:#ff79c6; }
+h2 { font-size:2em; margin-top:10px; color:#f1fa8c; }
+p { font-size:1.15em; max-width:900px; margin:20px auto; line-height:1.6; padding:0 15px; }
+
+/* Music button */
+#musicBtn { position:fixed; top:15px; right:15px; background:linear-gradient(135deg,#ff79c6,#bd93f9); border:none; border-radius:50px; padding:10px 20px; font-size:1em; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.3); color:#fff; display:flex; align-items:center; gap:10px; transition:all 0.3s ease; z-index:100;}
+#musicBtn:hover { transform:scale(1.1) rotate(-3deg); box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+#musicIcon { font-size:1.3em; }
+
+/* Confetti */
+.confetti{ position:absolute; width:12px; height:12px; animation:fall linear infinite; border-radius:50%; transform: rotate(0deg); }
+
+/* Balloons */
+.balloon { position:absolute; width:60px; height:80px; border-radius:50%; background: #ff6b81; animation: floatUp linear infinite; opacity:0.9; transform-origin:center bottom;}
+.balloon::after { content:''; position:absolute; bottom:-15px; left:50%; width:3px; height:15px; background:#fff; }
+
+/* Stars */
+.star { position:absolute; width:15px; height:15px; background:yellow; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation: twinkle 3s infinite alternate; }
+
+/* Cartoon Girl Photo */
+#photo { width:300px; height:auto; border-radius:20px; margin:20px auto; border:5px solid #ff79c6; box-shadow:0 0 20px rgba(255,121,198,0.6); }
+
+/* Animations */
+@keyframes glow { from{ text-shadow:0 0 10px #ff79c6;} to{ text-shadow:0 0 30px #bd93f9; } }
+@keyframes fall { to{transform:translateY(100vh) rotate(360deg);opacity:0;} }
+@keyframes floatUp { 0% {bottom:-100px; transform: rotate(-10deg);} 100% {bottom:100vh; transform: rotate(10deg);} }
+@keyframes twinkle { 0% {opacity:0.2; transform:scale(0.8);} 100% {opacity:1; transform:scale(1.2);} }
+
+/* Responsive */
+@media(max-width:600px){ 
+    h1{font-size:2.5em;} 
+    h2{font-size:1.5em;} 
+    p{font-size:1em;} 
+    #musicBtn{padding:8px 16px; font-size:0.9em;} 
+    #photo{width:200px;} 
+}
+</style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="music" loop>
+  <source src="C:\Users\awais\Downloads\happy-birthday-471481.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<button id="musicBtn" onclick="toggleMusic()"><span id="musicIcon">🔊</span> Play Song</button>
+
+<h1>🎉 Happy Birthday!! 👑🎀💖🎈</h1>
+<h2>My Friend Ghazala 🌸💗👸</h2>
+
+<!-- Cartoon Girl Photo -->
+<img id="photo" src="C:\Users\awais\Downloads\images.jpg" alt="Ghazala">
+
+<p>
+Happy Birthday to my favorite person in the world 💕👑🎀<br><br>
+You are the most beautiful soul 🌸, the strongest girl I’ve ever known 💪✨.  
+My lovely girl… your heart is as sweet as candy 🍬💖, and your kindness lights up the world 🌟💗.  
+Sometimes silly and stubborn 😄, but your cute, playful behavior makes me fall in love with you more every day 💕👸.<br><br>
+Above all, you are the one girl who makes me feel speechless and proud 😍🎀.  
+I don’t even have enough words to describe how precious and amazing you are 💖🌸.<br><br>
+You have no idea how much I like you 😘, how much I admire you 🌟.  
+Whenever I see you from across the road, my eyes adore you 💕✨… your smile fills my heart with joy 😊💗, and I am so proud to call you mine ❤️👑.<br><br>
+Babe, you are my everything 💖🎀.  
+You’re my dream 🌸✨.  
+One in a million 💗👸.  
+You’re the star of my universe 🌙⭐<br><br>
+From my deepest heart, I love you just as you are 💕 — your perfection and imperfections 💖, your strength and weakness 💪✨, and I want to discover every hidden side of you 👑💗.<br><br>
+I accept who you truly are 🌸💖.  
+Whenever you feel not enough, remember: <strong>You are more than enough for me 💕🎀</strong><br><br>
+You are already half of me ❤️✨.  
+You live in my heart now 💗👸.  
+I can never lose you… or I’ll lose pieces of myself 😘
+</p>
+
+<script>
+// Confetti
+const colors=["#ffeb3b","#ff79c6","#50fa7b","#8be9fd","#f1fa8c"];
+for(let i=0;i<250;i++){
+    let c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+    c.style.animationDuration=(2+Math.random()*4)+"s";
+    c.style.opacity=Math.random();
+    document.body.appendChild(c);
+}
+
+// Balloons
+const balloonColors=["#ff6b81","#f8a5c2","#ff9ff3","#ff7f50"];
+for(let i=0;i<15;i++){
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.style.left=Math.random()*90+"vw";
+    b.style.background=balloonColors[Math.floor(Math.random()*balloonColors.length)];
+    b.style.animationDuration=(5+Math.random()*5)+"s";
+    document.body.appendChild(b);
+}
+
+// Stars
+for(let i=0;i<20;i++){
+    let s=document.createElement("div");
+    s.className="star";
+    s.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*50+"vh";
+    s.style.animationDuration=(2+Math.random()*3)+"s";
+    document.body.appendChild(s);
+}
+
+// Music toggle
+function toggleMusic(){
+    const m = document.getElementById("music");
+    const icon = document.getElementById("musicIcon");
+    if(m.paused){ 
+        m.play(); 
+        icon.textContent = "🔊 Playing"; 
+    } else { 
+        m.pause(); 
+        icon.textContent = "🔈 Paused"; 
+    }
+}
+</script>
+
+</body>
+</html>
